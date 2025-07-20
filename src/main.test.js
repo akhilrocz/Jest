@@ -24,4 +24,20 @@ describe("test sum function", () => {
   test("sum of 2 and 3 not equal to 10", () => {
     expect(sum(2, 3)).not.toBe(10);
   });
+
+  test("sum of 0.11 and 0.2 to be close to 0.3 with a precision of 1 digit after decimal point",()=>{
+    expect(sum(0.11,0.2)).toBeCloseTo(0.3,1);
+  })
+
+
+  test('value should be defined',()=>{
+    const value ='defined';
+    expect(value).toBeDefined();  //pass
+    expect(value).not.toBeUndefined();  //pass
+    expect(undefined).not.toBeDefined();  //fails
+    expect(0).toBeDefined(); //pass
+    expect(null).toBeDefined(); //pass
+    expect('').toBeDefined(); //pass
+    expect(false).toBeDefined(); //pass
+  })
 });
