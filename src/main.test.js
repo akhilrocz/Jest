@@ -40,4 +40,38 @@ describe("test sum function", () => {
     expect('').toBeDefined(); //pass
     expect(false).toBeDefined(); //pass
   })
+
+
+  //numbers
+  test('two plus two',()=>{
+    const value =2+2;
+    expect(value).toBeGreaterThan(3);
+    expect(value).toBeGreaterThanOrEqual(4);
+    expect(value).toBeLessThan(5);
+    expect(value).toBeLessThanOrEqual(4.5);
+    expect(value).toBe(4);
+    expect(value).toEqual(4);
+  })
+
+
+  //strings
+  test('there is no I in team',()=>{
+    expect('team').not.toMatch(/I/);
+  })
+
+  test('there is no "stop" in Christoph',()=>{
+    expect('Christoph').toMatch(/stop/);
+  })
+
+
+  //arrays and iterables
+
+  const fruits =[
+    'apples','bananas','oranges'
+  ]
+
+  test('fruits has oranges in it',()=>{
+    expect(fruits).toContain('oranges')
+    expect(new Set(fruits)).toContain('oranges');
+  })
 });
