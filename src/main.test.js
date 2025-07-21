@@ -69,11 +69,29 @@ describe("test sum function", () => {
     expect(new Set(fruits)).toContain("oranges");
   });
 
+  test("checks array contain an object with same values", () => {
+    const users = [{ name: "Akhil" }, { name: "John" }];
+    expect(users).toContainEqual({ name: "John" });
+    expect(users).toHaveLength(2);
+  });
+
+  //Deep Equality
+
   test("object assignment with new values", () => {
     const data = { fruit: "apple" };
     data["color"] = "red";
     expect(data).toEqual({ fruit: "apple", color: "red" });
   });
+
+
+  //partial matching  //property matching
+
+  test('testing partial equality',()=>{
+    const user={name:'Alice',age:30};
+    expect(user).toMatchObject({name:'Alice'})
+    expect(user).toHaveProperty('name')
+    expect(user).toHaveProperty('name','Alice');
+  })
 
   test("testing truthy with non-zero number", () => {
     expect(10).toBeTruthy();
@@ -83,8 +101,28 @@ describe("test sum function", () => {
     expect(null).toBeFalsy();
   });
 
-  test('checks value is null',()=>{
-    const value =null;
+  test("checks value is null", () => {
+    const value = null;
     expect(value).toBeNull();
-  })
+  });
+
+  //function matchers
+  //toThrow()
+
+  test("checks if function throws an error", () => {
+    const throwError = () => {
+      throw new Error("Oops!");
+    };
+    expect(throwError).toThrow();
+  });
+
+  //toThrowError
+
+  function throwError() {
+    throw new Error("Specific Error");
+  }
+
+  test("checks if function throws a specific error", () => {
+    expect(() => throwError()).toThrow("Specific Error");
+  });
 });
