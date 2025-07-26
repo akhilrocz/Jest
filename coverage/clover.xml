@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1753116293934" clover="3.2.0">
-  <project timestamp="1753116293934" name="All files">
-    <metrics statements="11" coveredstatements="11" conditionals="4" coveredconditionals="4" methods="6" coveredmethods="6" elements="21" coveredelements="21" complexity="0" loc="11" ncloc="11" packages="1" files="3" classes="3"/>
+<coverage generated="1753525098415" clover="3.2.0">
+  <project timestamp="1753525098415" name="All files">
+    <metrics statements="14" coveredstatements="14" conditionals="4" coveredconditionals="4" methods="8" coveredmethods="8" elements="26" coveredelements="26" complexity="0" loc="14" ncloc="14" packages="1" files="4" classes="4"/>
     <file name="cloneArray.js" path="C:\Users\bakhi\Downloads\JestTutorial\src\cloneArray.js">
       <metrics statements="2" coveredstatements="2" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="1"/>
       <line num="3" count="2" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+    </file>
+    <file name="fetchData.js" path="C:\Users\bakhi\Downloads\JestTutorial\src\fetchData.js">
+      <metrics statements="3" coveredstatements="3" conditionals="0" coveredconditionals="0" methods="2" coveredmethods="2"/>
+      <line num="2" count="1" type="stmt"/>
+      <line num="3" count="1" type="stmt"/>
       <line num="7" count="1" type="stmt"/>
     </file>
     <file name="main.js" path="C:\Users\bakhi\Downloads\JestTutorial\src\main.js">
